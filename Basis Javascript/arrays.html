@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+<body>
+<header>
+    <h1>Theorie</h1>
+</header>
+<main>
+    <section id="menu">
+        <ol>
+            <li>oplossing mix</li>
+            <li>oplossing leeg</li>
+            <li>oplossing 3</li>
+        </ol>
+    </section>
+    <section id="arrays">
+        <h2>lege arrays</h2>
+        <p>var leeg = [] of new Array();</p>
+        <h2>gevulde array</h2>
+        <p>var getallen = [1,2,3,4,5];</p>
+        <h2>gemixte array van datatypes</h2>
+        <p>var mix = ['Jan','Piet',1,2,3,true,'Joris','Korneel']</p>
+        <h3>bijkomende info, die reeds gekent moest zijn</h3>
+        <p>mix[1] => Piet</p>
+        <h2>Meest gebruikte functies in arrays</h2>
+
+        <table>
+            <tr>
+               <th>Functie</th>
+                <th>Uitleg</th>
+            </tr>
+
+            <tr>
+                <td>Pop</td>
+                <td>Verwijder laatste element uit array</td>
+            </tr>
+
+            <tr>
+                <td>Sort</td>
+                <td>Sorteer een array alfabetisch (volgens ascii)</td>
+            </tr>
+            <tr>
+                <td>Push</td>
+                <td>aan het einde van een array een element toevoegen</td>
+            </tr>
+            <tr>
+                <td>Unshift</td>
+                <td>aan het begin van een array een element toevoegen</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="oplossingen">
+        <h4>oplossing mix</h4>
+        <hr>
+        <p>zorg ervoor dat alle elementen uit de mix op hhet scherm staan onder elkaar<br>
+        en zorg ervoor dat dit een ongeordende list is van elementen</p>
+        <div id="oplossingMix">
+
+        </div>
+        <hr>
+        <h4>oplossing leeg</h4>
+        <p>vraag aan de gebruiker hoeveel elementen hij wil ingeven. Vervolgens lees je ieder element afzonderlijk in en vul je de lege array<br>
+        daarna lees je de lege array uit en sorteer alfabetisch. tip : mijnarray.sort</p>
+        <div id="oplossingLeeg">
+
+        </div>
+
+        <hr>
+
+    </section>
+</main>
+<footer>
+
+</footer>
+
+<script>
+
+
+    var leeg = [];
+    var leeg2 = new Array();
+    var getallen = [1,2,3,4,5];
+    var mix = ['Jan','Piet',1,2,3,true,'Joris','Korneel'];
+    var keuze = parseInt(prompt('Geef je keuze in', 'keuze'));
+
+    switch(keuze){
+        case 1:
+            var schermweergave = '<ul>';
+
+            for(var teller = 0;teller < mix.length;teller++){
+                schermweergave = schermweergave + '<li>' + mix[teller] + '</li>';
+            }
+            schermweergave = schermweergave + '</ul>';
+            document.getElementById('oplossingMix').innerHTML = schermweergave;
+            break;
+        case 2:
+            var aantal = parseInt(prompt('Hoeveel elementen wil je ingeven', 'Hoeveel elementen?'));
+            var schermweergave2 = '';
+
+            for(var teller2 = 0;teller2 < aantal;teller2++){
+                leeg[teller2] = prompt('Geef element in:', 'element ' + (teller2 + 1));
+            }
+
+            leeg.sort();
+            for(var teller3 = 0;teller3 < leeg.length;teller3++){
+                schermweergave2 = schermweergave2 + leeg[teller3] + '<br>';
+            }
+            document.getElementById('oplossingLeeg').innerHTML = schermweergave2;
+            break;
+        case 3:
+            var aantal = parseInt(prompt('Hoeveel elementen wil je ingeven', 'Hoeveel elementen?'));
+            var schermweergave2 = '';
+
+            for(var teller2 = 0;teller2 < aantal;teller2++){
+                leeg[teller2] = prompt('Geef element in:', 'element ' + (teller2 + 1));
+            }
+
+            leeg.sort();
+
+            leeg.pop();
+            for(var teller4 = 0;teller4 < leeg.length;teller4++){
+                schermweergave2 = schermweergave2 + leeg[teller4] + '<br>';
+            }
+            document.getElementById('oplossingLeeg').innerHTML = schermweergave2;
+            break;
+
+        default:
+            alert('Verkeerde keuze');
+            break;
+    }
+
+    // oplossing mix
+
+    // var schermweergave = '<ul>';
+    //
+    // for(var teller = 0;teller < mix.length;teller++){
+    //     schermweergave = schermweergave + '<li>' + mix[teller] + '</li>';
+    // }
+    // schermweergave = schermweergave + '</ul>';
+    // document.getElementById('oplossingMix').innerHTML = schermweergave;
+
+
+    // oplossing leeg
+
+    // var aantal = parseInt(prompt('Hoeveel elementen wil je ingeven', 'Hoeveel elementen?'));
+    // var schermweergave2 = '';
+    //
+    // for(var teller2 = 0;teller2 < aantal;teller2++){
+    //     leeg[teller2] = prompt('Geef element in:', 'element ' + (teller2 + 1));
+    // }
+    //
+    // leeg.sort();
+    // for(var teller3 = 0;teller3 < leeg.length;teller3++){
+    //     schermweergave2 = schermweergave2 + leeg[teller3] + '<br>';
+    // }
+    // document.getElementById('oplossingLeeg').innerHTML = schermweergave2;
+
+    // haal de laatste uit de reeks
+
+    // leeg.pop();
+    // for(var teller4 = 0;teller4 < leeg.length;teller4++){
+    //     schermweergave2 = schermweergave2 + leeg[teller4] + '<br>';
+    // }
+    // document.getElementById('oplossingLeeg').innerHTML = schermweergave2;
+
+
+</script>
+</body>
+</html>

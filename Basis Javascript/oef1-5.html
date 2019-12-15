@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oefening1</title>
+</head>
+<body>
+
+
+<script>
+    // oefening 1
+    var graden = parseInt(prompt('Geef het aantal graden in :', 'Aantal graden'));
+    var fahrenheit = graden * 1.8 + 32;
+    document.write(graden + ' graden is ' + fahrenheit + ' fahrenheit' + '<br>');
+
+
+    // oefening 2
+    var getal1 = parseFloat(prompt('Geef een getal in :', 'geef getal'));
+    var tekst = '' + getal1 + ' + ' + getal1 + ' = ' + getal1 + getal1 + '';
+    document.write(tekst  + '<br>');
+
+    // oefening 3
+    var resultaat = getal1 + getal1;
+    var tekst2 = '' + getal1 + ' + ' + getal1 + ' = ' + resultaat + '.';
+    document.write(tekst2 + '<br>');
+
+
+    //oefening 4
+    var leeftijd = parseInt(prompt('Geef je leeftijd in:', 'leeftijd'));
+
+    if (leeftijd === 0){
+        alert('Je bent een baby');}
+    else if (leeftijd < 0 || leeftijd > 400){
+        alert('Ik denk dat je liegt over je leeftijd'); }
+    else {
+        alert('Dat is een goede leeftijd');
+    }
+
+    // switch (leeftijd) {
+    //     case 0:
+    //         alert('Je bent een baby');
+    //         break;
+    //
+    //     case (leeftijd < 0):
+    //         alert('Ik denk dat je liegt over je leeftijd');
+    //         break;
+    //
+    //     case (leeftijd > 400):
+    //         alert('Ik denk dat je liegt over je leeftijd');
+    //         break;
+    //
+    //     default:
+    //         alert('Dat is een goede leeftijd');
+    //         break;
+    // }
+
+    //oefening 5
+    var getal2 = parseInt(prompt('Geef een getal in waarvan je de tafel wilt zien', 'geef getal'));
+    var schermweergave = '';
+
+    for(var teller = 1;teller <=getal2;teller++){
+        var som = getal2 * teller;
+        schermweergave = schermweergave + getal2 + ' * ' + teller + ' = ' + som +'<br>';
+    }
+    document.write(schermweergave);
+
+
+</script>
+</body>
+</html>

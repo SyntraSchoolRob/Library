@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Functies</title>
+</head>
+<body>
+    <h1>Functies - inline event handler</h1>
+<button id="btnPrompt" onclick="wNaam();">Voer uw naam in</button>
+<div id="divResult"></div>
+
+
+
+    <script>
+        function  wNaam() {
+            var naam = prompt('Vul uw naam in:', 'uw naam');
+            var weergave = 'De naam die u invoerde was: ' + naam;
+            document.getElementById('divResult').innerHTML = weergave;
+        }
+
+    </script>
+</body>
+</html>

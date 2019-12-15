@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Oefening</title>
+</head>
+<body>
+
+<h1>string omzetten naar hoofdletters</h1>
+<div id="divGroteLetters"></div>
+<div id="divKleineLetters"></div>
+<div id="divSamenGevoegd"></div>
+<div id="divEenKarakter"></div>
+<div id="divUnicode"></div>
+<div id="divSplit"></div>
+<div id="divSubString"></div>
+<div id="divIndex"></div>
+<div id="divLastIndex"></div>
+<div id="divReplace"></div>
+
+
+<script>
+    var string1 = prompt('Geef een woord in:', 'Vul hier een woord in');
+    var string2 = prompt('Geef nog een woord in:', 'Vul hier nog een woord in');
+    var positie1 = prompt('Geef een positie in', 'Geef hier de te kiezen positie');
+    var positie2 = prompt('Geef nog een positie in', 'Geef hier de tweede te kiezen positie');
+    var positie3 = positie1 - 1;
+    var positie4 = positie2 - 1;
+
+    var resultaatGroot = string1.toUpperCase();
+    var resultaatKlein = string2.toLowerCase();
+    var samen = '';
+
+    var groteLetters = 'Omgezet naar hoofdletters : ' + string1 + ' = ' + resultaatGroot;
+    var kleineLetters = 'Omgezet naar kleine letters : ' + string1 + ' = ' + resultaatKlein;
+    var samenGevoegd = 'De 2 woorden samengevoegd is : ' + samen.concat(string1, string2);
+    var eenKarakter = 'Het karakter op positie ' + positie1 + ' = ' + string1.charAt(positie3);
+    var eenUnicode = 'De unicode voor het karakter op ' + positie1 + ' = ' + string1.charCodeAt(positie3);
+    var eenSplit = 'Na het uithalen van het karakter ' + string1.charAt(positie3) + ' blijft er over : ' + string1.split(string1.charAt(positie3));
+    var eenSubString = 'Dit is een substring van het woord ' + string1 + ' : ' + string1.substring(positie3, positie4);
+    var eenIndex = 'De index van het karakter op ' + positie1 + ' = ' + string1.indexOf(string1.charAt(positie3));
+    var eenLastIndex = 'het karakter ' + string1.charAt(positie3) + ' komt een laatse keer voor op de plaats ' + string1.lastIndexOf(string1.charAt(positie3));
+    var eenVervanging = 'Het woord ' + string1 + ' na vervanging = ' + string1.replace(string1.charAt(positie3), string1.charAt(positie4));
+
+    document.getElementById('divGroteLetters').innerHTML = groteLetters;
+    document.getElementById('divKleineLetters').innerHTML = kleineLetters;
+    document.getElementById('divSamenGevoegd').innerHTML = samenGevoegd;
+    document.getElementById('divEenKarakter').innerHTML = eenKarakter;
+    document.getElementById('divUnicode').innerHTML = eenUnicode;
+    document.getElementById('divSplit').innerHTML = eenSplit;
+    document.getElementById('divSubString').innerHTML = eenSubString;
+    document.getElementById('divIndex').innerHTML = eenIndex;
+    document.getElementById('divLastIndex').innerHTML = eenLastIndex;
+    document.getElementById('divReplace').innerText = eenVervanging;
+
+
+
+</script>
+</body>
+</html>

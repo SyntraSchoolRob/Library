@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>klikken</title>
+</head>
+<body>
+
+<h2>inhoud van een tekstvak opvragen</h2>
+<input type="text" id="txtNaam" placeholder="Uw naam...">
+<button id="btnKnop">Toon boodschap</button>
+<div id="divResult">
+
+</div>
+
+<script>
+    var naam = '';
+
+    window.onload = function () {
+        var divResult = document.getElementById('divResult');
+
+        // event handler om een knop op te vangen
+        document.getElementById('btnKnop').addEventListener('click',
+        function () {
+           naam = document.getElementById('txtNaam').value;
+           divResult.innerHTML = '<h2> Welkom ' + naam + '</h2>';
+        }, false);
+    }
+</script>
+</body>
+</html>

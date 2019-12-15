@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Objecten2</title>
+</head>
+<body>
+
+
+<script>
+    function Dier(soortValue){
+        this.soort = soortValue;
+    }
+
+    function Katachtigen(soortValue) {
+        this.soort = soortValue;
+    }
+
+    var katachtige1 = new Katachtigen('Leeuw');
+    var katachtige2 = new Katachtigen('Tijger');
+
+    var dier1 = new Dier(katachtige1.soort);
+    var dier2 = new Dier('Tijger');
+    var dier3 = new Dier('Kameel');
+    var dier4 = new Dier('Pinguin');
+
+    document.write(dier1.soort + ' ' + dier2.soort);
+
+
+</script>
+</body>
+</html>

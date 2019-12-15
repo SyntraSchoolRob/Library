@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Opdracht1</title>
+</head>
+<body>
+
+<div id="divResult">
+
+</div>
+
+<script>
+    var gebJaar = parseInt(prompt('In welk jaar ben je geboren'));
+    var d = new Date();
+    var huidigJaar = d.getFullYear();
+
+    if (huidigJaar - gebJaar >= 18){
+        divResult.innerHTML = '<h2>Toegang verleend</h2>';
+    }
+    else{
+        divResult.innerHTML = '<h2>Toegang geweigerd</h2>';
+    }
+</script>
+</body>
+</html>

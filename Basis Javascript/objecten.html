@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Objecten</title>
+</head>
+<body>
+<header>
+    <h1>objecten</h1>
+</header>
+<main>
+    <section id="leegObject">
+        <h2>leeg object</h2>
+        <p>een object wordt met accolades geschreven in tegenstelling tot arrays.</p
+        <p>
+            var leegObject = {};
+            var leegObject = new Object();
+        </p>
+        <hr>
+        <h2>objecten met eigenschappen (properties of attributes)</h2>
+         <p>var auto = {Merk:'Mercedes', Type:'C-klasse', Kleur:'rood'};</p>
+    </section>
+</main>
+<footer>
+
+</footer>
+
+
+<script>
+    // leeg object
+    var leegObject = {}; //1e manier
+    var leegObject = new Object(); //2e manier
+
+    // object met eigenschappen
+    //
+    // 1e manier
+ //   var auto = {Merk:'Mercedes', Type:'C-klasse', Kleur:'rood'};
+
+    // 2e manier
+   //  var auto = new Object();
+    // auto.merk = 'Mercedes';
+    // auto.type = 'C-Klasse';
+    // auto.kleur = 'rood';
+
+    // hergebruik van objecten doen we met een object constructor
+
+    function Auto(merkValue, typeValue, kleurValue, brandstofValue){
+        this.merk = merkValue;
+        this.type = typeValue;
+        this.kleur = kleurValue;
+        this.brandstof = brandstofValue;
+    }
+
+
+    function Merken(typeNaamValue){
+        this.typeNaam = typeNaamValue;
+    }
+
+    // var merk1 = new Merken('Mercedes');
+    // var merk2 = new Merken('Volkswagen');
+    // var merk3 = new Merken('BMW');
+    //
+    // var auto1 = new Auto(merk1.typeNaam, 'C-Klasse', 'rood', 'Diesel');
+    // var auto2 = new Auto('Mercedes', 'E-Klasse', 'zwart', 'Diesel');
+    // var auto3 = new Auto('Volkswagen', 'Polo', 'wit', 'CNG');
+    // var auto4 = new Auto(merk3.typeNaam, 'Z4','Wit','Diesel');
+    //
+    //
+    //
+    // document.write('auto1 zijn kleur is ' + auto1.kleur +'<br>');
+    // document.write('auto1 zijn merk is ' + auto1.merk +'<br>');
+    // document.write('De BMW nog in stock is ' + auto4.merk + auto4.type +'<br>' +'<hr>');
+
+
+    // oefening op objecten
+
+    // var key = 'merk' + teller;
+    // var obj = {};
+    // obj[key] = 'iets';
+    // arrayMerken.push(obj);
+    //
+    // key:value
+
+    var aantal = parseInt(prompt('Hoeveel merken wilt u ingeven?', 'Aantal merken'));
+    arrayMerken = new Array();
+    var obj = {};
+
+    for(var teller = 0;teller < aantal;teller++){
+        var key = 'merk' + teller;
+        obj[key] = new Merken(prompt('Geef een merk in', 'geef merk'));
+
+
+        arrayMerken.push(obj[key].typeNaam);
+
+
+        document.write(key + ' = ' + obj[key].typeNaam + '<br>');
+    }
+
+    document.write(arrayMerken.length +'<br>');
+
+    for(var teller = 0;teller < aantal;teller++){
+        document.write(obj[key].typeNaam);
+    }
+
+
+         document.write(arrayMerken);
+
+    // arrayMerken[0]{merk0.typeNaam}
+
+
+    // for(var teller2 = 0;teller2 < aantal; teller2++){
+    //     document.write('Merk' + teller2 + ' = ' + gegevenMerk[key].typeNaam);
+    //
+    // }
+
+
+
+
+
+
+</script>
+</body>
+</html>

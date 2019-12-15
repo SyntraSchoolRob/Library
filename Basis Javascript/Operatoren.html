@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Voorwaardelijke operatoren (shorthand)</title>
+</head>
+<body>
+<header>
+    <h1>Voorwaardelijke operatoren</h1>
+</header>
+<main>
+    <div id="divResult">
+
+    </div>
+
+</main>
+<footer>
+    &copy; Full Stack Developers 2018
+</footer>
+
+<script>
+    var vraag = 'Hoeveel is 20 + 60 ?';
+    var antwoord = 80;
+    var goed = '<h2>Prima, doe zo verder</h2>';
+    var fout = '<h2>Jammer, gebuisd</h2>';
+
+    //vraag stellen aan de gebruiker
+    var response = parseInt(prompt(vraag), '0');
+
+    // controleer het antwoord
+    var resultaat = (response === antwoord) ? goed : fout;
+
+    document.getElementById('divResult').innerHTML = resultaat;
+
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse events uitbreiding</title>
+
+    <style>
+        #divBox{
+            height: 150px;
+            width: 150px;
+            border : 2px solid black;
+        }
+        #divCoords{
+            height: 150px;
+            width: 150px;
+            border : 2px solid black;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h2>mouseover en mouseout</h2>
+    <div id="divBox"></div>
+    <div id="divCoords"></div>
+    <div id="divResult"></div>
+
+
+<script>
+    // voer script uit zodra de pagina helemaal geladen is
+
+    window.onload = function () {
+        // caching van html elementen in variabelen
+        var divResult = document.getElementById('divResult');
+        var divBox = document.getElementById('divBox');
+        var divCoords = document.getElementById('divCoords');
+
+        //event handeler om mouseover af te vangen
+        divBox.onmouseover = function () {
+            divResult.innerHTML += 'De muis is nu in de box';
+        }
+
+        // event handeler om mouseout af te vangen
+        divBox.onmouseout = function () {
+            divResult.innerHTML += 'Tot ziens! De muis heeft de box verlaten';
+        }
+
+        //functie om mouse move binnen de box op te vangen
+        // coordinaten worden meegeven waar de muispointer zich op h et scherm bevindt
+        divBox.onmousemove = function (e) {
+            divCoords.innerHTML = 'Coordinaten voor de X -as : ' + e.clientX + ' Y-as : ' + e.clientY;
+        }
+     }
+</script>
+</body>
+</html>

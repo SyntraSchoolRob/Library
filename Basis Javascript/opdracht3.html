@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Opdracht3</title>
+</head>
+<body>
+
+
+<script>
+    var getal1 = parseFloat(prompt('Geef een getal in.', 'Geef getal'));
+    var getal2 = parseFloat(prompt('Geef nog een getal in.', 'Geef getal'));
+
+    do{
+         var bewerking = prompt('Geef de operator in.' ,'+,-,*,/');
+    }
+    while((bewerking !== '+') && (bewerking !== '-') && (bewerking !== '*') && (bewerking !== '/'));
+
+    switch (bewerking){
+        case '+':
+            var resultaat = parseFloat(getal1 + getal2);
+            break;
+        case '-':
+            var resultaat = parseFloat(getal1 - getal2);
+            break;
+        case '*':
+            var resultaat = parseFloat(getal1 * getal2);
+            break;
+        case '/':
+            var resultaat = parseFloat(getal1 / getal2);
+            break;
+        default:
+            alert('Ongeldige bewerking, probeer opnieuw');
+            break;
+    }
+    alert('Het resultaat van de bewerking is : ' + resultaat);
+
+</script>
+</body>
+</html>

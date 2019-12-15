@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Functies parseInt en parseFloat en andere build in functies</title>
+</head>
+<body>
+    <h1>Javascript telmachine</h1>
+<div id="divResult"></div>
+
+    <p>toUpperCase()</p>
+    <p>toLowerCase()</p>
+    <p>concat() = mijnvariabele.concat(string1,string2) = samenvoegen</p>
+    <p>charAt(0) = haal één karakter ui een string vanaf een positie.
+        mijnvariabele.charAt(0) => t</p>
+    <p>charCodeAt(0) = 72</p>
+    <p>split() = mijnvaraibele.split("e")</p>
+    <p>substring() = mijnvariabele.substring(0,3) => tes</p>
+    <p>IndexOf() = mijnvariabele.IndexOf('s') => 2</p>
+    <p>LastIndexOf() = mijnvariabele.LastIndexOf('t') => 3 , komt dus de laatste keer voor op het element 3</p>
+    <p>Replace() = mijnvariabele.Replace('e','a') => tast</p>
+
+<script>
+    var mijnvariabele = test;
+    var getal1 = prompt('Vul het eerste getal in:', 'getal 1');
+    var getal2 = prompt('Vul het tweede getal in:', 'getal 2');
+    // totaal = getal1 + getal2
+
+    var  totaal = parseInt(getal1) + parseInt(getal2); //parseFloat voor kommagetallen
+    var tekst = getal1 + ' plus ' + getal2 + ' = ' + totaal;
+    document.getElementById('divResult').innerHTML = tekst;
+
+</script>
+</body>
+</html>

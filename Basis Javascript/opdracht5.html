@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Opdracht 5</title>
+</head>
+<body>
+    <h1>Javascript paswoord generator</h1>
+    <input type="text" id="txtInput">
+    <button id="btnEncrypt">Encryptie</button>
+    <div id="divEncrypt"></div>
+
+    <hr>
+
+    <input type="text" id="txtDecrypt">
+    <button id="btnDecrypt">Decryptie</button>
+    <div id="divDecrypt"></div>
+
+<script>
+    window.onload = function () {
+        document.getElementById('btnEncrypt').addEventListener('click',
+        function () {
+            var input = document.getElementById('txtInput').value;
+            var changer1 = parseInt(input.length / 2) + 2;
+            var changer2 = parseInt(input.length / 2) - 2;
+            for(var teller=0;teller < input.length;teller++){
+                if (teller % 2 !== 0){
+                    var oneven = input.charCodeAt(teller);
+                    oneven = oneven + changer1;
+                    var letter = String.fromCharCode(oneven);
+                    console.log(letter);
+                    console.log(input.charAt(teller));
+                    input.replace(input.charAt(teller), letter);
+                }
+                else{
+                    var even = input.charCodeAt(teller);
+                    even = even + changer2;
+                    var letter2 = String.fromCharCode(even);
+                    console.log(letter2);
+                    console.log(input.charAt(teller));
+                    input.replace(input.charAt(teller), letter2);
+                }
+            }
+            document.getElementById('divEncrypt').innerHTML = input;
+        });
+    };
+</script>
+</body>
+</html>

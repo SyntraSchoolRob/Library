@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Oefening</title>
+</head>
+<body>
+<header>
+    <h1>Vergelijk 2 getallen</h1>
+</header>
+<main>
+    <div id="divResult">
+
+    </div>
+
+</main>
+<footer>
+    &copy; Full Stack Developers 2018
+</footer>
+
+<script>
+    var getal1 = parseInt(prompt('Geef een getal in', 'geef getal 1'));
+    var getal2 = parseInt(prompt('Geef een tweede getal', 'geeef getal 2'));
+
+    var kleinste = (getal1 < getal2) ? getal1 : getal2;
+
+    var juist = '<h2>De getallen zijn gelijk</h2>';
+    var fout = '<h2>Het kleinste getal = ' + kleinste + '</h2>';
+
+    var resultaat = (getal1 === getal2) ? juist : fout;
+
+    document.getElementById('divResult').innerHTML = resultaat;
+</script>
+</body>
+</html>

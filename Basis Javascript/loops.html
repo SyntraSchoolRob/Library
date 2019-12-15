@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>For loop - while loop</title>
+</head>
+<body>
+<div id="divResult">
+
+</div>
+<div id="divResult2">
+
+</div>
+
+
+<script>
+    var getal = 8;
+    var teller = 1
+    var schermweergave = '';
+    var schermweergave2 = '';
+    for(teller;teller<=10;teller++){
+        schermweergave = schermweergave + teller*getal + '|';
+    }
+    document.getElementById('divResult').innerHTML = schermweergave;
+
+
+    teller = 1;
+    while(teller !== getal){
+        schermweergave2 = schermweergave2 + ' blijven proberen ';
+        teller++;
+    }
+    document.getElementById('divResult2').innerHTML = schermweergave2;
+</script>
+</body>
+</html>

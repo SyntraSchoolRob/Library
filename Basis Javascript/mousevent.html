@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse events</title>
+
+    <style>
+        #divBox{
+            height: 150px;
+            width: 150px;
+            border : 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h2>mouseover en mouseout</h2>
+    <div id="divBox"></div>
+    <div id="divResult"></div>
+
+<script>
+    // voer script uit zodra de pagina helemaal geladen is
+
+    window.onload = function () {
+        // caching vanhtml elementen in variabelen
+        var divResult = document.getElementById('divResult');
+        var divBox = document.getElementById('divBox');
+
+        //event handeler om mouseover af te vangen
+        divBox.onmouseover = function () {
+            divResult.innerHTML += 'De muis is nu in de box';
+        }
+
+        // event handeler om mouseout af te vangen
+        divBox.onmouseout = function () {
+            divResult.innerHTML += 'Tot ziens! De muis heeft de box verlaten';
+        }
+    }
+</script>
+</body>
+</html>

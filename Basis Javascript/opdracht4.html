@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Opdracht 4</title>
+
+    <style>
+        #divBox{
+            width: 1000px;
+            height: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        /*#divResultaat{*/
+            /*float: right;*/
+        /*}*/
+    </style>
+</head>
+<body>
+    <div id="divBox">
+        <h2>JAVASCRIPT REKENMACHINE</h2>
+        <div id="divInput">
+            <input type="text" id="txtGetal1" placeholder="Geef een getal in.">
+            <select id="selector">
+                <option>/</option>
+                <option>-</option>
+                <option>*</option>
+                <option>+</option>
+            </select>
+            <input type="text" id="txtGetal2" placeholder="Geef een getal in.">
+            <button id="btnBereken">=</button>
+            <div id="divResultaat"></div>
+         </div>
+    </div>
+
+
+
+<script>
+
+    window.onload = function () {
+       document.getElementById('btnBereken').addEventListener('click',
+            function(){
+                var getal1 = parseFloat(document.getElementById('txtGetal1').value);
+                var getal2 = parseFloat(document.getElementById('txtGetal2').value);
+                var bewerking = document.getElementById('selector').value;
+                document.getElementById('divResultaat').innerHTML = rekenMachine(getal1, getal2, bewerking);
+            });
+    };
+
+    function rekenMachine(getal1,getal2,operator) {
+        var resultaat = 0;
+        switch (operator) {
+            case '+':
+                resultaat = parseFloat(getal1 + getal2);
+                break;
+            case '-':
+                resultaat = parseFloat(getal1 - getal2);
+                break;
+            case '*':
+                resultaat = parseFloat(getal1 * getal2);
+                break;
+            case '/':
+                resultaat = parseFloat(getal1 / getal2);
+                break;
+            default:
+                resultaat = 0;
+                break;
+        }
+        return resultaat;
+    }
+</script>
+</body>
+</html>

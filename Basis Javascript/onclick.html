@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onclick events</title>
+</head>
+<body>
+    <p>Wat is de huidige tijd? Klik op de knop</p>
+    <button onclick="toonDatum()">Toon tijd</button>
+
+    <div id="divResult">
+
+    </div>
+<script>
+    function toonDatum() {
+        var d = new Date();
+        document.getElementById('divResult').innerHTML = d.getFullYear();
+    }
+</script>
+</body>
+</html>

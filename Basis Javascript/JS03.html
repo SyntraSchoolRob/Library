@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>innerhtml en prompt</title>
+</head>
+<body>
+<div class="divResultaat">
+
+</div>
+<div class="divResultaat">
+
+</div>
+    <script>
+        var naam = prompt('Vul uw naam in:', 'uw naam');
+        var weergave = 'De naam die u invoerde was: ' + naam;
+        document.getElementById('divResultaat').innerHTML = weergave;
+    </script>
+</body>
+</html>
